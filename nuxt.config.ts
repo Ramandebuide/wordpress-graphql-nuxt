@@ -13,7 +13,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      GQL_HOST: 'http://localhost/wordpress/graphql'
+      GQL_HOST: 'http://localhost:80/wordpress/graphql'
     }
   },
 
