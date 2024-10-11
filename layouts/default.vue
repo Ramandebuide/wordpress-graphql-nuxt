@@ -1,15 +1,11 @@
 <template lang="">
-    <TheHeader/>
-    <div>
-        <slot/>
-    </div>
-    <Footer/>
+  <TheHeader />
+  <div>
+    <slot />
+  </div>
+  <Footer />
 </template>
 <script>
-export default {
-    
-}
+export default {};
 </script>
-<style lang="">
-    
-</style>
+<style lang=""></style>

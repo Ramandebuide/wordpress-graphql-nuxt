@@ -1,14 +1,13 @@
 <template lang="">
-  <div className='bg-slate-300 h-lvh'>
-     <PostDetails :data='data'></PostDetails>
+  <div className="bg-slate-300 h-lvh">
+    <PostDetails :data="data"></PostDetails>
   </div>
 </template>
 <script setup>
 const { id } = useRoute().params;
-const org = process.env.GQL_HOST||"http://127.0.0.1:80/wordpress/graphql";
+const org = process.env.GQL_HOST || "http://127.0.0.1:80/wordpress/graphql";
 
-
-const {data,refresh,error} = await useFetch(org, {
+const { data, refresh, error } = await useFetch(org, {
   method: "POST",
   body: {
     query: `
@@ -24,21 +23,19 @@ const {data,refresh,error} = await useFetch(org, {
   }
 }
 `,
-variables:{
-  id:id
-}
+    variables: {
+      id: id,
+    },
   },
-  transform(data){
+  transform(data) {
     return data.data.post;
-  }
-  
+  },
 });
 
-if(data){console.log({data:data});
+if (data) {
+  console.log({ data: data });
 }
-if(error){
-  console.error({customerror:error})
+if (error) {
+  console.error({ customerror: error });
 }
-
 </script>
-
