@@ -7,7 +7,7 @@
 const { id } = useRoute().params;
 const config = useRuntimeConfig();
 
-const {data,refresh,error} = await useFetch(config.public.GQL_HOST, {
+const {data,refresh,error} = await useFetch("http://127.0.0.1:80/wordpress/graphql", {
   method: "POST",
   body: {
     query: `

@@ -17,11 +17,11 @@ export default defineNuxtConfig({
     "@nuxt/image",
   ],
 
-  runtimeConfig: {
-    public: {
-      GQL_HOST: process.env.GQL_HOST || "http://127.0.0.1:80/wordpress/graphql",
-    },
-  },
+  // runtimeConfig: {
+  //   public: {
+  //     GQL_HOST: process.env.GQL_HOST || "http://127.0.0.1:80/wordpress/graphql",
+  //   },
+  // },
 
   routeRules: {
     "/": { prerender: true },
