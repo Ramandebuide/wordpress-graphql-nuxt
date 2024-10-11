@@ -7,7 +7,7 @@
 const { id } = useRoute().params;
 const org = process.env.GQL_HOST || "http://127.0.0.1:80/wordpress/graphql";
 
-const { data, refresh, error } = await useFetch(org, {
+const { data } = await useFetch(org, {
   method: "POST",
   body: {
     query: `
@@ -32,10 +32,11 @@ const { data, refresh, error } = await useFetch(org, {
   },
 });
 
-if (data) {
-  console.log({ data: data });
-}
-if (error) {
-  console.error({ customerror: error });
-}
+// did for debugging purpose
+// if (data) {
+//   console.log({ data: data });
+// }
+// if (error) {
+//   console.error({ customerror: error });
+// }
 </script>
