@@ -9,11 +9,17 @@ export default defineNuxtConfig({
       }
     }
   },
-  modules: ['@nuxt/content','nuxt-graphql-client','@nuxt/devtools','@nuxtjs/tailwindcss'],
+  modules: [
+    '@nuxt/content',
+    'nuxt-graphql-client',
+    '@nuxt/devtools',
+    '@nuxtjs/tailwindcss',
+    '@nuxt/image'
+  ],
 
   runtimeConfig: {
     public: {
-      GQL_HOST: 'http://localhost:80/wordpress/graphql'
+      GQL_HOST: 'http://127.0.0.1:80/wordpress/graphql'
     }
   },
 
