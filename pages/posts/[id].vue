@@ -33,5 +33,11 @@ variables:{
   
 });
 
+if(data){console.log({data:data});
+}
+if(error){
+  console.error({customerror:error})
+}
+
 </script>
 

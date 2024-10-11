@@ -24,6 +24,12 @@ const {data,refresh,error} = await useFetch("http://127.0.0.1:80/wordpress/graph
 return data.data.posts.nodes as Array<Record<'title'|'date'|'excerpt'|'uri'|'id',string>>;
   }
 });
+if(data){console.log({data:data});
+}
+if(error){
+  console.error({customerror:error})
+}
+
 </script>
 
 <template lang="">
