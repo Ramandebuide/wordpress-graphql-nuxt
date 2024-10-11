@@ -1,0 +1,41 @@
+query PostsFetch {
+  posts(first:10) {
+    edges {
+      node {
+        title
+        slug
+        id
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}
+
+query postsDetails{
+   posts(first:10) {
+   nodes{
+    title
+    date
+    excerpt
+    uri
+    id
+   }
+  }
+}
+
+query getById($id:ID!) {
+  post(id:$id) {
+    title
+    content
+    featuredImage {
+      node {
+        sourceUrl
+      }
+    }
+  }
+}
+
