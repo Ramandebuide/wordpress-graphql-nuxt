@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 
-const config = useRuntimeConfig();
+const org = process.env.GQL_HOST||"http://127.0.0.1:80/wordpress/graphql";
 
-const {data,refresh,error} = await useFetch("http://127.0.0.1:80/wordpress/graphql", {
+const {data,refresh,error} = await useFetch(org, {
   method: "POST",
   body: {
     query: `
