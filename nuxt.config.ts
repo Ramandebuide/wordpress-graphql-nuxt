@@ -5,27 +5,27 @@ export default defineNuxtConfig({
     watch: {
       ws: {
         port: 3000,
-        showURL: true
-      }
-    }
+        showURL: true,
+      },
+    },
   },
   modules: [
-    '@nuxt/content',
-    'nuxt-graphql-client',
-    '@nuxt/devtools',
-    '@nuxtjs/tailwindcss',
-    '@nuxt/image'
+    "@nuxt/content",
+    "nuxt-graphql-client",
+    "@nuxt/devtools",
+    "@nuxtjs/tailwindcss",
+    "@nuxt/image",
   ],
 
   runtimeConfig: {
     public: {
-      GQL_HOST: 'http://127.0.0.1:80/wordpress/graphql'
-    }
+      GQL_HOST: process.env.GQL_HOST || "http://127.0.0.1:80/wordpress/graphql",
+    },
   },
 
   routeRules: {
-    '/': { prerender: true }
+    "/": { prerender: true },
   },
 
-  compatibilityDate: '2024-10-09'
-})
+  compatibilityDate: "2024-10-09",
+});
