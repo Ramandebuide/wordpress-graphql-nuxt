@@ -1,5 +1,5 @@
 <template lang="">
-  <div className='bg-slate-300'>
+  <div className='bg-slate-300 h-lvh'>
      <PostDetails :data='data'></PostDetails>
   </div>
 </template>

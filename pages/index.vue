@@ -33,10 +33,11 @@ if(error){
 </script>
 
 <template lang="">
-  <div class=" bg-slate-300 h-lvh">
-    <TheHeader></TheHeader>
-    <div class=" grid gap-4 grid-cols-1 lg:grid-cols-3 p-6   ">
+  <div class="  bg-slate-300 ">
+    
+    <div class="h-lvh grid gap-4 grid-cols-1 lg:grid-cols-3 p-6   ">
     <PostCard class="border-slate-300" v-for="post in data" :post="post" :key="post.uri"></PostCard>
     </div>
+    
   </div>
 </template>
